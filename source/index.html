@@ -9,27 +9,29 @@
   <body>
 
     <header class="page-header">
-      <p class="page-header__logo">
+      <div class="page-header__logo">
         <a class="page-header__logo-link">
           <img class="page-header__logo-img" src="http://placehold.it/33x38" alt="Логотип Cat Energy" width="33" height="38">
         </a>
         <p class="page-header__logo-text logo-text">
-          <a class="btn logo-text__link">
+          <a class="logo-text__link">
             <b>Cat</b> Energy
           </a>  
         </p>        
-      </p>      
-      <nav class="main-nav page-header__nav">
-        <button class="btn main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="nav-list main-nav__list">
-          <li class="nav__item nav__item--active"><a class="nav__link nav__link--active">Главная</a></li>
-          <li class="nav__item"><a class="nav__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="nav__item"><a class="nav__link" href="programs.html">Подбор программы</a></li>
+      </div>      
+      <nav class="page-header__nav main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="programs.html">Подбор программы</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="page-main">
+
+      <h1 class="visually-hidden">Cat Energy - функциональное питание для котов</h1>
 
       <section class="promo">
         <h2 class="promo__title section-title">Функциональное питание для котов</h2>
@@ -43,19 +45,19 @@
       <section class="programs">
         <h2 class="visually-hidden">Наши программы</h2>
         <ul class="programs-list">
-          <li class="program__item">
-            <h3 class="program__title program__title--slim">Похудение</h3>
-            <p class="program__text">
+          <li class="programs__item">
+            <h3 class="programs__title programs__title--slim">Похудение</h3>
+            <p class="programs__text">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
             </p>
-            <a class="program__btn" href="#">Каталог Slim</a>
+            <a class="programs__btn" href="#">Каталог Slim</a>
           </li>
-          <li class="program__item">
-            <h3 class="program__title program__title--pro">Набор массы</h3>
-            <p class="program__text">
+          <li class="programs__item">
+            <h3 class="programs__title programs__title--pro">Набор массы</h3>
+            <p class="programs__text">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
-            <a class="btn program__btn" href="#">Каталог Pro</a>
+            <a class="programs__btn" href="#">Каталог Pro</a>
           </li>
         </ul>
       </section>
@@ -106,26 +108,26 @@
             </li>
           </ul>
           <div class="slider__controls">
-              <button class="slider__control slider__control--before btn" type="button">Было</button>
-              <button class="slider__control slider__control--after btn" type="button">Стало</button>
+              <button class="slider__control slider__control--before" type="button">Было</button>
+              <button class="slider__control slider__control--after" type="button">Стало</button>
             </div>  
         </div> 
       </section>
     </main>
     
     <footer class="page-footer">
-      <div class="page-footer__contacts contacts">
-        <p class="contacts__dealers">
+      <div class="page-footer__contacts">
+        <p class="page-footer__dealers">
           Приглашаем к сотрудничеству дилеров!
         </p>
-        <p class="contacts__text">
+        <p class="page-footer__address">
             ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </p>
-        <div class="contacts__map map">
-          <img class="map__img" src="http://placehold.it/320x400" alt="Наш адрес: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+        <div class="contacts__map">
+          <img class="contacts__map-img" src="http://placehold.it/320x400" alt="Наш адрес: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
         </div>                
       </div>
-      <p class="logo-text page-footer__logo-text">
+      <p class="page-footer__logo-text logo-text">
         <a class="logo-text__link">
           <b>Cat</b> Energy
         </a>  
@@ -143,9 +145,9 @@
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright copyright">
-        <a class="btn copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="btn copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+      <div class="page-footer__copyright">
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="page-footer__copyright-icon" href="https://htmlacademy.ru/intensive/adaptive"></a>
       </div> 
     </footer> 
   </body>

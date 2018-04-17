@@ -19,12 +19,12 @@
           </a>  
         </p>        
       </p>      
-      <nav class="main-nav page-header__nav">
-        <button class="btn main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="nav-list main-nav__list">
-          <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
-          <li class="nav__item"><a class="nav__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="nav__item nav__item--active"><a class="nav__link nav__link--active">Подбор программы</a></li>
+      <nav class="page-header__nav main-nav ">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Подбор программы</a></li>
         </ul>
       </nav>
     </header>
@@ -36,18 +36,20 @@
 
       <form action="https://echo.htmlacademy.ru" method="post" class="profile">
         <fieldset class="profile__fieldset">
-          <p class="profile__item">
-            <label class="profile__label" for="name-field">Имя:<sup>*</sup></label>
-            <input class="profile__input" type="text" id="name-field" name="name" placeholder="Барсик">
-          </p>
-          <p class="profile__item">
-            <label class="profile__label" for="weight-field">Вес (кг):<sup>*</sup></label>
-            <input class="profile__input" type="text" id="weight-field" name="weight" placeholder="7">
-          </p>
-          <p class="profile__item">
-            <label class="profile__label" for="age-field">Возраст (лет):</label>
-            <input class="profile__input" type="text" id="age-field" name="age" placeholder="7">
-          </p>   
+          <ul class="profile__list">
+            <li class="profile__item">
+              <label class="profile__label" for="name-field">Имя:<sup>*</sup></label>
+              <input class="profile__input" type="text" id="name-field" name="name" placeholder="Барсик">
+            </li>
+            <li class="profile__item">
+              <label class="profile__label" for="weight-field">Вес (кг):<sup>*</sup></label>
+              <input class="profile__input" type="text" id="weight-field" name="weight" placeholder="7">
+            </li>
+            <li class="profile__item">
+              <label class="profile__label" for="age-field">Возраст (лет):</label>
+              <input class="profile__input" type="text" id="age-field" name="age" placeholder="7">
+            </li>  
+          </ul>             
         </fieldset>
         <fieldset class="profile__fieldset">
           <ul class="profile__list">
@@ -67,14 +69,16 @@
         </fieldset>
         <fieldset class="profile__fieldset">
           <legend class="profile__legend title-line">Контактные данные (владельца кота)</legend>
-          <p class="profile__item">
+          <ul class="profile__list">
+            <li class="profile__item">
               <label class="profile__label" for="email-field">E-mail:<sup>*</sup></label>
               <input class="profile__input" type="email" id="email-field" name="email" placeholder="Kuklachev@gmail.com">
-            </p>
-            <p class="profile__item">
+            </li>
+            <li class="profile__item">
               <label class="profile__label" for="weight-field">Вес (кг):<sup>*</sup></label>
               <input class="profile__input" type="tel" id="tel-field" name="tel" placeholder="8 (960) 900-60-90">
-            </p>
+            </li>
+          </ul>          
         </fieldset>
         <fieldset class="profile__fieldset">
           <legend class="profile__legend title-line">Комментарий</legend>
@@ -108,19 +112,19 @@
     </main>
     
     <footer class="page-footer">
-      <div class="page-footer__contacts contacts">
-        <p class="contacts__dealers">
+      <div class="page-footer__contacts">
+        <p class="page-footer__dealers">
           Приглашаем к сотрудничеству дилеров!
         </p>
-        <p class="contacts__text">
+        <p class="page-footer__address">
             ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </p>
-        <div class="contacts__map map">
-          <img class="map__img" src="http://placehold.it/320x400" alt="Наш адрес: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+        <div class="contacts__map">
+          <img class="contacts__map-img" src="http://placehold.it/320x400" alt="Наш адрес: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
         </div>                
       </div>
-      <p class="logo-text page-footer__logo-text">
-        <a class="logo-text__link" href="index.html">
+      <p class="page-footer__logo-text logo-text">
+        <a class="logo-text__link">
           <b>Cat</b> Energy
         </a>  
       </p>
@@ -137,9 +141,9 @@
           </li>
         </ul>
       </div>
-      <div class="page-footer__copyright copyright">
-        <a class="btn copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-        <a class="btn copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+      <div class="page-footer__copyright">
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="page-footer__copyright-icon" href="https://htmlacademy.ru/intensive/adaptive"></a>
       </div> 
     </footer> 
   </body>
