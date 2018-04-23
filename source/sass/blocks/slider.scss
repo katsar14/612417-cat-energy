@@ -1,0 +1,21 @@
+.slider {
+
+}
+
+.slider__list {
+  @include listReset;
+  position: relative;
+  width: 320px;
+  height: 240px;
+  margin-bottom: 30px;
+}
+
+.slider__item--after {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.slider__controls {
+  text-align: center;
+}

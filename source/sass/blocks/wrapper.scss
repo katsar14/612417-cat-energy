@@ -1,0 +1,33 @@
+.wrapper {
+  margin: 0 20px 22px;
+
+  &--promo {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  &--programs {
+    margin-bottom: 16px;
+  }
+
+  &--description {
+    margin-bottom: 40px;
+  }
+
+  &--heading {
+    margin-bottom: 0;
+  }
+
+  &--supplementary {
+    margin-bottom: 37px;
+  }
+
+  &--gift {
+    margin-bottom: 37px;
+  }
+
+  &--profile {
+    margin-bottom: 19px;
+  }
+}
+

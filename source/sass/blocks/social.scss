@@ -1,0 +1,14 @@
+.social {
+
+}
+
+.social__list {
+  @include listReset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 124px;
+  margin: 0 auto;
+  padding: 22px 0 21px;
+}
+

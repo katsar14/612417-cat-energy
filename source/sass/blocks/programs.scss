@@ -1,0 +1,12 @@
+.programs {
+
+}
+
+.programs__list {
+  @include listReset;
+}
+
+.programs__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+

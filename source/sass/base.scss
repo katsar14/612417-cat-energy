@@ -1,0 +1,29 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  @include reset;
+  box-sizing: border-box;
+}
+
+body {
+  @include reset;
+  min-width: 320px;
+
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $textDark;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

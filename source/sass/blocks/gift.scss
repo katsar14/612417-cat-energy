@@ -1,0 +1,16 @@
+.gift {
+  height: 289px;
+  padding: 188px 50px 20px;
+
+  background: $primaryCol url("../img/gift-photo-mobile@1x.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.gift__text {
+  @include reset;
+
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
