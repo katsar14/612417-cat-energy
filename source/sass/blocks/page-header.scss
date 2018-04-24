@@ -1,5 +1,9 @@
 .page-header {
   background-color: #ffffff;
+
+  @include tablet {
+    display: flex;
+  }
 }
 
 .page-header__container {
@@ -8,6 +12,10 @@
   padding: 15px 20px 14px;
 
   border-bottom: 1px solid $secondaryCol;
+
+  @include tablet {
+    border: none;
+  }
 }
 
 .page-header__logo {
@@ -23,6 +31,12 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+.page-header__nav-toggle {
+  @include tablet {
+    display: none;
   }
 }
 
