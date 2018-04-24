@@ -1,0 +1,36 @@
+.main-nav {
+
+}
+
+.main-nav__toggle {
+
+}
+
+.main-nav__list {
+  @include listReset;
+
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.main-nav__item {
+
+}
+
+.main-nav__link {
+  display: block;
+  padding: 22px 0 23px;
+
+  color: $textDark;
+  text-align: center;
+  border-bottom: 1px solid $secondaryCol;
+
+  &:hover {
+    color: rgba($textDark, 0.6);
+  }
+
+  &:active {
+    color: rgba($textDark, 0.3);
+  }
+}

@@ -1,0 +1,24 @@
+.description {
+
+}
+
+.description__list {
+  @include listReset;
+}
+
+.description__title {
+  margin-bottom: 28px;
+}
+
+.description__item {
+  min-height: 60px;
+  padding: 4px 0 5px 80px;
+
+  &:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
+
+.description__text {
+  @include reset;
+}

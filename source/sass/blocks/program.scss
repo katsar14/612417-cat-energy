@@ -1,0 +1,34 @@
+.program {
+  padding: 30px 20px 23px;
+
+  background-color: $secondaryCol;
+}
+
+.program__title {
+  @include reset;
+  margin-bottom: 30px;
+  padding-left: 72px;
+
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+}
+
+.program__text {
+  @include reset;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.program__btn {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 18px;
+
+  line-height: 16px;
+  color: $textDark;
+
+  &:active {
+    color: rgba($textDark, 0.3)
+  }
+}

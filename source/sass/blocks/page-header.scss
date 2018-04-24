@@ -1,0 +1,31 @@
+.page-header {
+  background-color: #ffffff;
+}
+
+.page-header__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 20px 14px;
+
+  border-bottom: 1px solid $secondaryCol;
+}
+
+.page-header__logo {
+  width: 190px;
+  height: 38px;
+  margin-right: auto;
+}
+
+.page-header__logo-link {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-header__nav {
+
+}

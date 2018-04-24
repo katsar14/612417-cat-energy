@@ -1,0 +1,40 @@
+.btn {
+  font: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  &--primary {
+    width: 100%;
+
+    color: #ffffff;
+    background-color: $primaryCol;
+
+    &:hover {
+      background-color: #5eaa2f;
+    }
+
+    &:active {
+      color: rgba(#ffffff, 0.3);
+    }
+  }
+
+  &--secondary {
+    width: 100%;
+
+    color: #444444;
+    background-color: $secondaryCol;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(#444444, 0.3);
+    }
+  }
+}

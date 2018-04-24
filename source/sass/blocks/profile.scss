@@ -1,0 +1,90 @@
+.profile {
+
+}
+
+.profile__fieldset {
+  @include reset;
+  border: none;
+
+  &--radio {
+    border-top: 1px solid $secondaryCol;
+    border-bottom: 1px solid $secondaryCol;
+  }
+}
+
+.profile__list {
+  @include listReset;
+  padding: 20px 20px 23px;
+
+  &--radio {
+    padding-top: 25px;
+  }
+}
+
+.profile__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &--radio {
+    margin-bottom: 23px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.profile__label {
+  padding-right: 15px;
+  white-space: nowrap;
+}
+
+.profile__input {
+  flex: 1;
+  padding: 11px 50px 13px 14px;
+
+  font: inherit;
+  text-transform: uppercase;
+  border: none;
+  outline: 1px solid #cdcdcd;
+
+  &:active, &:focus {
+    outline: 2px solid #444444;;
+  }
+
+  &:invalid {
+    outline: 2px solid #ff8282;
+  }
+}
+
+.profile__legend {
+  padding: 32px 0 13px 20px;
+
+  &--comment {
+    padding-top: 8px;
+    padding-bottom: 33px;
+  }
+}
+
+.profile__comment {
+  width: 100%;
+  min-height: 150px;
+  margin: 0 20px;
+  padding: 11px 13px;
+
+  font: inherit;
+  text-transform: uppercase;
+}
+
+.profile__btn {
+  margin: 0 20px 20px;
+  padding: 10px 20px 10px;
+}
+
+.profile__note {
+  display: block;
+  margin-bottom: 30px;
+
+  text-align: center;
+}
