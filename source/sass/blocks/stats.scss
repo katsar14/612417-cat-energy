@@ -1,27 +1,90 @@
 .stats {
-  padding: 18px 0 35px;
+  padding: 18px 0 31px;
 
   background-color: $secondaryCol;
+
+  @include tablet {
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  @include desktop {
+    width: 1440px;
+    margin: 0 auto;
+    padding-top: 80px;
+    display: flex;
+  }
 }
 
 .stats__container {
   margin-bottom: 35px;
   padding: 0 20px;
+
+  @include tablet {
+    width: $tablet-width;
+    margin: 0 auto;
+    padding: 38px 30px 220px;
+    background-color: #ffffff;
+  }
+
+  @include desktop {
+    width: 720px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .stats__title {
   margin-bottom: 25px;
+
+  @include tablet {
+    margin-bottom: 65px;
+  }
+
+  @include desktop {
+    padding-left: 110px;
+    margin-bottom: 73px;
+  }
 }
 
 .stats__info {
   @include reset;
   margin-bottom: 25px;
   padding-right: 10px;
+
+  @include tablet {
+    margin-bottom: 51px;
+  }
+
+  @include desktop {
+    padding: 70px 175px 68px 110px;
+    margin-bottom: 0;
+    background-color: $secondaryCol;
+  }
+}
+
+.stats__inner-container {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    flex-direction: column;
+    background-color: $secondaryCol;
+    padding: 0 100px 70px 110px;
+  }
 }
 
 .stats__table-container {
   margin-left: -2px;
   margin-bottom: 31px;
+
+  @include desktop {
+    margin-left: 0;
+    margin-bottom: 45px;
+  }
 }
 
 .stats__table {
@@ -29,6 +92,10 @@
   margin: 0 auto;
 
   text-align: center;
+
+  @include desktop {
+    margin: 0;
+  }
 }
 
 .stats__field {
@@ -43,23 +110,50 @@
   line-height: 12px;
   text-transform: lowercase;
   background-color: $secondaryCol;
+
+  @include tablet {
+    width: auto;
+    padding: 5px 6px;
+    left: 7.8%;
+    bottom: -8%;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+  }
+
+  @include desktop {
+    background-color: $secondaryCol;
+  }
 }
 
 .stats__field:nth-child(2) {
   left: 62%;
+
+  @include tablet {
+    left: 58.5%;
+  }
 }
 
 .stats__value {
   display: inline-block;
   vertical-align: middle;
-  width: 124px;
+  min-width: 120px;
   margin-right: 30px;
-  padding: 14px 5px 15px;
+  padding: 13px 12px 14px 8px;
 
   font-size: 24px;
   line-height: 24px;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
+
+  @include tablet {
+    min-width: 163px;
+    padding: 14px 15px 19px;
+    margin-right: 37px;
+
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .stats__value:last-child {
@@ -71,9 +165,29 @@
 
   font-size: 14px;
   text-align: center;
+
+  @include tablet {
+    width: 190px;
+    padding-top: 8px;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: right;
+  }
+
+  @include desktop {
+    width: auto;
+    text-align: left;
+  }
+}
+
+.stats__cost span {
+  @include desktop{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 60px;
+  }
 }
 
 .stats__slider {
-  width: 320px;
-  margin: 0 auto;
+  padding: 0 20px;
 }

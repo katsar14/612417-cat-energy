@@ -1,21 +1,148 @@
 .slider {
+  @include tablet {
+    padding: 35px 40px 70px;
+    background-color: $secondaryCol;
+  }
 
+  @include desktop {
+    width: 720px;
+    margin-top: 133px;
+    padding: 35px 110px 67px 30px;
+  }
 }
 
 .slider__list {
   @include listReset;
   position: relative;
+  padding-bottom: 268px;
+
+  @include tablet {
+    padding-bottom: 327px;
+  }
+}
+
+.slider__item {
+  position: absolute;
+  top: 0;
+  left: 50%;
   width: 320px;
   height: 240px;
-  margin-bottom: 30px;
+  transform: translateX(-50%);
+
+  @include tablet {
+    width: 677px;
+    height: 499px;
+    top: -195px;
+  }
+
+  @include desktop {
+    top: -225px;
+    left: 47%;
+  }
+}
+
+.slider__img {
+  display: block;
+  width: 100%;
+  z-index: 2;
+}
+
+slider__img--before {
+
 }
 
 .slider__item--after {
-  position: absolute;
-  top: 0;
-  z-index: -1;
+  display: none;
 }
 
 .slider__controls {
-  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  width: 207px;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet {
+    width: 570px;
+  }
+
+  @include desktop {
+    margin-left: 10px;
+  }
+}
+
+.slider__btn {
+  @include tablet {
+    padding: 6px 0;
+    border-bottom: 1px dotted #bebebe;
+
+    &:hover {
+      border-bottom: 1px solid #989898;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      padding-bottom: 7px;
+      border: none;
+    }
+  }
+}
+
+.slider__bar {
+  position: relative;
+  width: 84px;
+  height: 14px;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+
+  @include tablet {
+    width: 428px;
+    height: 6px;
+    background-color: rgba(#000000, 0.11);
+    border-radius: 3px;
+  }
+}
+
+.slider__control {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 6px;
+  background-color: $primaryCol;
+  border-radius: 3px;
+
+  @include tablet {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background-color: $primaryCol;
+    }
+
+    &:hover {
+      box-shadow: 0px 3px 5px  rgba(0, 0, 0, 0.25);
+    ;
+    }
+
+    &:active {
+      border: 2px solid $primaryCol;
+      box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.3);
+    }
+  }
 }

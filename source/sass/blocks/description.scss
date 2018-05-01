@@ -1,24 +1,129 @@
-.description {
-
-}
-
 .description__list {
   @include listReset;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    min-height: 610px;
+    justify-content: space-between;
+    align-content: space-between;
+    padding-bottom: 54px;
+    border-bottom: 1px solid $secondaryCol;
+  }
+
+  @include desktop {
+    min-height: 0;
+    flex-wrap: nowrap;
+    padding: 0 40px;
+    border: none;
+  }
 }
 
 .description__title {
   margin-bottom: 28px;
+
+  @include tablet {
+    margin-bottom: 0;
+    padding: 0 30px 70px;
+  }
+
+  @include desktop {
+    padding: 0 40px 70px;
+  }
 }
 
 .description__item {
+  position: relative;
   min-height: 60px;
-  padding: 4px 0 5px 80px;
+  padding: 0 0 0 80px;
 
   &:not(:last-child) {
     margin-bottom: 18px;
+
+    @include tablet {
+      margin: 0;
+    }
+  }
+
+  @include tablet {
+    width: 325px;
+    padding: 111px 80px 42px 0;
+  }
+
+  @include desktop {
+    width: 245px;
+    padding-right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+
+    @include tablet {
+      top: 0;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    @include tablet {
+      position: absolute;
+      font-size: 281px;
+      line-height: 281px;
+      color: $secondaryCol;
+      z-index: -1;
+      top: -40px;
+      left: 113px;
+    }
+  }
+
+  &--1::before {
+    background: $primaryCol url("../img/advantage-leaf@1x.png") center no-repeat;
+  }
+
+  &--2::before {
+    background: $primaryCol url("../img/advantage-powder@1x.png") center no-repeat;
+  }
+
+  &--3::before {
+    background: $primaryCol url("../img/advantage-dining@1x.png") center no-repeat;
+  }
+
+  &--4::before {
+    background: $primaryCol url("../img/advantage-clock@1x.png") center no-repeat;
+  }
+
+  &--1::after {
+    @include tablet {
+      content: "1";
+    }
+  }
+
+  &--2::after {
+    @include tablet {
+      content: "2";
+    }
+  }
+
+  &--3::after {
+    @include tablet {
+      content: "3";
+    }
+  }
+  &--4::after {
+    @include tablet {
+      content: "4";
+    }
   }
 }
 
 .description__text {
   @include reset;
+  padding: 3px 0 7px;
 }

@@ -1,27 +1,122 @@
+.product {
+  @include tablet {
+    position: relative;
+    width: 324px;
+    margin-top: 83px;
+    padding: 162px 37px 39px;
+    background-color: $secondaryCol;
+  }
+
+  @include desktop {
+    width: 245px;
+  }
+
+  &--supplementary {
+    @include tablet {
+      position: static;
+      width: 100%;
+      margin: 0;
+      padding: 23px 37px 27px;
+      background-color: #ffffff;
+    }
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      width: 895px;
+      padding: 16px 0 15px;
+    }
+  }
+}
+
 .product--show-more {
   padding-top: 26px;
 
   text-align: center;
+
+  @include tablet {
+    padding-top: 163px;
+    border: 1px solid #cdcdcd;
+    background-color: #ffffff;
+  }
+
+  &::before,
+  &::after {
+    @include tablet {
+      content: "";
+      position: absolute;
+      top: 54px;
+      left: 50%;
+      display: block;
+      width: 2px;
+      height: 60px;
+      background-color: #e6e6e6;
+      transform: translateX(-50%);
+    }
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
 }
+
 .product__container {
   display: flex;
+
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 .product__img-container {
   width: 50%;
+
+  @include tablet {
+    position: absolute;
+    top: -130px;
+    left: 50%;
+    z-index: -1;
+    width: 100%;
+    transform: translateX(-50%);
+  }
 }
 
 .product__img {
 vertical-align: top;
+
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .product__info {
   width: 50%;
   padding-top: 20px;
 
+  @include tablet {
+    width: auto;
+    padding: 0;
+    margin-bottom: 33px;
+  }
+
   &--supplementary {
     width: auto;
     padding: 0 0 10px;
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      padding-bottom: 7px;
+    }
+
+    @include desktop {
+      width: 610px;
+      align-items: center;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      padding-top: 2px;
+    }
   }
 }
 
@@ -34,14 +129,44 @@ vertical-align: top;
   line-height: 20px;
   font-weight: 400;
 
+  @include tablet {
+    padding: 0 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  @include desktop {
+    padding: 0 20px;
+  }
+
   &--show-more {
     padding-top: 53px;
     padding-right: 0;
     margin-bottom: 9px;
+
+    @include tablet {
+      padding: 0 40px;
+      margin-bottom: 25px;
+    }
+
+    @include desktop {
+      padding: 0 15px;
+    }
   }
 
   &--supplementary {
     margin-bottom: 10px;
+
+    @include tablet {
+      padding: 0;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -50,9 +175,64 @@ vertical-align: top;
   font-size: 12px;
   line-height: 13px;
 
+  @include tablet {
+    font-size: 16px;
+    line-height: 16px;
+    border-collapse: collapse;
+  }
+
   &--supplementary {
     font-size: 14px;
     line-height: 14px;
+
+    @include tablet {
+      width: auto;
+      display: flex;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include desktop {
+      width: 285px;
+    }
+  }
+}
+
+.product__table--supplementary tbody {
+  @include desktop {
+    width: 285px;
+    display: flex;
+  }
+}
+
+.product__table--supplementary tr {
+  @include desktop {
+    width: 285px;
+    display: flex;
+  }
+}
+
+.product__table--supplementary .product__data {
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.product__data {
+  @include tablet {
+    padding: 9px 0 7px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.product__table--supplementary td {
+  border: none;
+  @include tablet {
+    padding: 4px 0 8px 53px;
+  }
+
+  @include desktop {
+    padding: 0;
   }
 }
 
@@ -62,6 +242,18 @@ vertical-align: top;
 
 .product__btn {
   padding: 10px 20px 10px;
+
+  @include tablet {
+    width: 100%;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &--supplementary {
+    @include desktop {
+      width: 245px;
+    }
+  }
 }
 
 .product__text {
@@ -70,4 +262,15 @@ vertical-align: top;
 
   font-size: 12px;
   line-height: 16px;
+
+  @include tablet {
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 83px;
+  }
+
+  @include desktop {
+    padding: 0;
+  }
 }

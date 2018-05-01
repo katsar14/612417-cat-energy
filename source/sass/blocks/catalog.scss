@@ -1,10 +1,52 @@
 .catalog {
+  @include tablet {
+    width: $tablet-width;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
 
+  @include desktop {
+    width: $desktop-width;
+    margin: 0 auto;
+    padding: 0 110px;
+  }
+
+  &--supplementary {
+    @include tablet {
+      padding: 0;
+      margin-bottom: 70px;
+    }
+
+    @include desktop {
+      width: $desktop-width;
+      margin: 0 auto;
+    }
+  }
 }
 
 .catalog__list {
   @include listReset;
   border-top: 1px solid $secondaryCol;
+
+  @include tablet {
+    border: none;
+  }
+
+  &--main {
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &--supplementary {
+
+    @include desktop {
+      width: 895px;
+      border-top: 1px solid $secondaryCol;
+    }
+  }
 }
 
 .catalog__item {
@@ -12,12 +54,55 @@
 
   border-bottom: 1px solid $secondaryCol;
 
+  &--main {
+    @include tablet {
+      border: none;
+      margin-bottom: 58px;
+    }
+  }
+
   &--supplementary {
     padding: 11px 0 19px;
+
+    @include tablet {
+      border: 1px solid $secondaryCol;
+      border-bottom: none;
+    }
+
+    @include desktop {
+      border: none;
+      border-bottom: 1px solid $secondaryCol;
+    }
+  }
+
+  &--supplementary:last-child {
+    border-bottom: 1px solid $secondaryCol;
   }
 }
 
 .catalog__title {
   @include reset;
   padding: 28px 0 34px 20px;
+
+  @include tablet {
+    padding: 7px 0 80px;
+  }
+
+  @include desktop {
+    width: 100%;
+    padding: 18px 0 79px;
+  }
 }
+
+.catalog__container {
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1440px;
+    padding: 0 110px 85px;
+    margin: 0 auto;
+  }
+}
+
+

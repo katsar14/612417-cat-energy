@@ -1,17 +1,49 @@
 .wrapper {
   margin: 0 20px 22px;
 
+  @include tablet {
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
   &--promo {
     margin-right: 0;
     margin-left: 0;
+
+    @include tablet {
+      margin: 0 auto;
+    }
   }
 
   &--programs {
     margin-bottom: 16px;
+
+    @include tablet {
+      margin-bottom: 45px;
+    }
+
+    @include desktop {
+      margin-bottom: 73px;
+    }
   }
 
   &--description {
     margin-bottom: 40px;
+
+    @include tablet {
+      width: $tablet-width;
+      margin: 0 auto;
+    }
+
+    @include desktop {
+      width: 1300px;
+      margin: 0 auto;
+    }
   }
 
   &--heading {
@@ -19,15 +51,42 @@
   }
 
   &--supplementary {
+    margin: 0 20px;
     margin-bottom: 37px;
+
+    @include tablet {
+      width: 708px;
+      margin: 0 auto 72px;
+    }
+
+    @include desktop {
+      width: 895px;
+      margin: 0;
+    }
   }
 
   &--gift {
+    margin: 0 20px;
     margin-bottom: 37px;
+
+    @include tablet {
+      width: 708px;
+      margin: 0 auto;
+      margin-bottom: 76px;
+    }
+
+    @include desktop {
+      width: 245px;
+      margin: 0;
+    }
   }
 
   &--profile {
     margin-bottom: 19px;
+  }
+
+  @include tablet {
+    margin-bottom: 46px;
   }
 }
 

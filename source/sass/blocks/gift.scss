@@ -1,9 +1,34 @@
 .gift {
-  height: 289px;
-  padding: 188px 50px 20px;
+  position: relative;
+  padding: 188px 50px 41px;
 
-  background: $primaryCol url("../img/gift-photo-mobile@1x.jpg") center no-repeat;
+  background: $primaryCol url("../img/gift-photo-mobile@1x.jpg") 60% 64% no-repeat;
   background-size: cover;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    padding: 71px 100px 69px 423px;
+  }
+
+  @include desktop {
+    padding: 188px 40px 40px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    display: block;
+    width: 55px;
+    height: 60px;
+    background: url("../img/icon-gift.svg") no-repeat center;
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      top: 65px;
+      left: 119px;
+    }
+  }
 }
 
 .gift__text {
@@ -13,4 +38,8 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    text-align: left;
+  }
 }

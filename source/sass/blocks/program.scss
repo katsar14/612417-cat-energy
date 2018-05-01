@@ -1,7 +1,100 @@
 .program {
+  position: relative;
   padding: 30px 20px 23px;
 
   background-color: $secondaryCol;
+
+  @include tablet {
+    padding: 77px 280px 64px 53px;
+  }
+
+  @include desktop {
+    width: 570px;
+    padding: 77px 50px 64px 53px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: $primaryCol;
+
+    @include tablet {
+      top: 91px;
+      left: 445px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @include desktop {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+    }
+  }
+
+  &--pro {
+    @include tablet {
+      padding-right: 314px;
+    }
+
+    @include desktop {
+      padding-right: 50px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 35px;
+      left: 13px;
+      width: 67px;
+      height: 28px;
+      background: url(../img/icon-cat-pro.svg) no-repeat;
+
+      @include tablet {
+        top: 134px;
+        left: 411px;
+        width: 268px;
+        height: 112px;
+      }
+
+      @include desktop {
+        top: 70px;
+        left: 35px;
+        width: 134px;
+        height: 56px;
+      }
+    }
+  }
+
+  &--slim::after {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 30px;
+    width: 35px;
+    height: 49px;
+    background: url(../img/icon-cat-slim.svg) no-repeat;
+
+    @include tablet {
+      top: 83px;
+      left: 475px;
+      width: 140px;
+      height: 194px;
+    }
+
+    @include desktop {
+      top: 42px;
+      left: 67px;
+      width: 70px;
+      height: 97px;
+    }
+  }
 }
 
 .program__title {
@@ -12,23 +105,82 @@
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
+
+  @include tablet {
+    margin-bottom: 24px;
+    padding-left: 0;
+    font-size: 36px;
+    line-height: 37px;
+  }
+
+  @include desktop {
+    padding-left: 163px;
+    margin-bottom: 73px;
+  }
 }
 
 .program__text {
   @include reset;
-  padding-bottom: 23px;
+  margin-bottom: 23px;
   border-bottom: 1px solid #f0f0f0;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    margin-bottom: 15px;
+  }
 }
 
 .program__btn {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   margin-top: 18px;
+  padding-right: 48px;
 
   line-height: 16px;
   color: $textDark;
 
-  &:active {
-    color: rgba($textDark, 0.3)
+  @include tablet {
+    padding-right: 60px;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 19px;
+    top: 7px;
+    display: block;
+    width: 18px;
+    height: 3px;
+    background-color: #3e4242;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 7px;
+    top: 2px;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-left: 6px solid #3F4242;
+  }
+
+  &:hover::before {
+    width: 26px;
+    right: 11px;
+  }
+
+  &:hover::after {
+    right: -1px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
 }

@@ -1,9 +1,27 @@
 .page-title {
   @include reset;
-  padding: 13px 0 26px;
+  padding: 14px 0 29px;
 
   font-size: 36px;
   line-height: 60px;
   font-weight: 400;
   text-transform: none;
+
+  @include tablet {
+    padding: 51px 0 83px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @include desktop {
+    padding: 68px 110px 83px;
+  }
+
+  &--profile {
+    padding-bottom: 27px;
+
+    @include tablet {
+      padding-bottom: 56px;
+    }
+  }
 }

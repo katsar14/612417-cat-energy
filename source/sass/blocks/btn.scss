@@ -21,6 +21,10 @@
     &:active {
       color: rgba(#ffffff, 0.3);
     }
+
+    @include tablet {
+      width: auto;
+    }
   }
 
   &--secondary {
