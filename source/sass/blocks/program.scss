@@ -54,7 +54,7 @@
       left: 13px;
       width: 67px;
       height: 28px;
-      background: url(../img/icon-cat-pro.svg) no-repeat;
+      background: url("../img/icon-cat-pro.svg") no-repeat;
 
       @include tablet {
         top: 134px;
@@ -79,7 +79,7 @@
     left: 30px;
     width: 35px;
     height: 49px;
-    background: url(../img/icon-cat-slim.svg) no-repeat;
+    background: url("../img/icon-cat-slim.svg") no-repeat;
 
     @include tablet {
       top: 83px;
@@ -167,7 +167,7 @@
     width: 0;
     height: 0;
     border: 6px solid transparent;
-    border-left: 6px solid #3F4242;
+    border-left: 6px solid #3f4242;
   }
 
   &:hover::before {
@@ -182,5 +182,4 @@
   &:active {
     opacity: 0.3;
   }
-
 }

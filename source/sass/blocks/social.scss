@@ -1,7 +1,3 @@
-.social {
-
-}
-
 .social__list {
   @include listReset;
   display: flex;
@@ -11,4 +7,3 @@
   margin: 0 auto;
   padding: 22px 0 21px;
 }
-

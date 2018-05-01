@@ -47,7 +47,6 @@
     justify-content: flex-start;
     margin-bottom: 45px;
   }
-
 }
 
 .profile__fieldset {
@@ -288,8 +287,9 @@
   border: none;
   outline: 1px solid #cdcdcd;
 
-  &:active, &:focus {
-    outline: 2px solid #444444;;
+  &:active,
+  &:focus {
+    outline: 2px solid #444444;
   }
 
   &:invalid {
@@ -395,4 +395,3 @@
     align-self: center;
   }
 }
-

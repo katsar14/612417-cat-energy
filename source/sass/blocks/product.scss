@@ -82,7 +82,7 @@
 }
 
 .product__img {
-vertical-align: top;
+  vertical-align: top;
 
   @include tablet {
     width: 100%;
@@ -227,6 +227,7 @@ vertical-align: top;
 
 .product__table--supplementary td {
   border: none;
+
   @include tablet {
     padding: 4px 0 8px 53px;
   }

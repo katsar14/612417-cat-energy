@@ -116,6 +116,7 @@
       content: "3";
     }
   }
+
   &--4::after {
     @include tablet {
       content: "4";

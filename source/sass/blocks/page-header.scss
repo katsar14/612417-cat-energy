@@ -1,5 +1,4 @@
 .page-header {
-
   @include tablet {
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +22,6 @@
       left: 50%;
       top: 0;
       z-index: 3;
-      background-color: #ffffff;
       transform: translate(-50%);
       background: transparent;
     }
@@ -52,7 +50,7 @@
     width: 173px;
     height: 58px;
   }
- }
+}
 
 .page-header__logo-link {
   &:hover {
@@ -68,8 +66,4 @@
   @include tablet {
     display: none;
   }
-}
-
-.page-header__nav {
-
 }

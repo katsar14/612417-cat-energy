@@ -47,10 +47,6 @@
   z-index: 2;
 }
 
-slider__img--before {
-
-}
-
 .slider__item--after {
   display: none;
 }
@@ -123,7 +119,7 @@ slider__img--before {
     border-radius: 50%;
     background-color: #ffffff;
     border: 1px solid #cdcdcd;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 
     &::before {
       content: "";
@@ -136,13 +132,12 @@ slider__img--before {
     }
 
     &:hover {
-      box-shadow: 0px 3px 5px  rgba(0, 0, 0, 0.25);
-    ;
+      box-shadow: 0 3px 5px  rgba(0, 0, 0, 0.25);
     }
 
     &:active {
       border: 2px solid $primaryCol;
-      box-shadow: 0px 4px 5px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.3);
     }
   }
 }
