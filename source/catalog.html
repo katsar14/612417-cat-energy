@@ -17,7 +17,7 @@
             <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Логотип Cat Energy" width="190" height="38">
           </a>
         </div>
-        <button class="page-header__nav-toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="page-header__nav-toggle btn" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </div>
       <nav class="page-header__nav main-nav">
         <ul class="main-nav__list">
@@ -34,8 +34,8 @@
 
       <section class="catalog">
         <h2 class="visually-hidden">Основной каталог</h2>
-        <ul class="catalog__list">
-          <li class="catalog__item product">
+        <ul class="catalog__list catalog__list--main">
+          <li class="catalog__item catalog__item--main product">
             <div class="product__container">
               <div class="product__img-container">
                 <img class="product__img" src="img/chicken-small-mobile@1x.jpg" alt="Фото товара" width="140" height="144">
@@ -62,7 +62,7 @@
             </div>
             <button class="product__btn btn btn--primary">Заказать</button>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item catalog__item--main product">
             <div class="product__container">
               <div class="product__img-container">
                 <img class="product__img" src="img/chicken-big-mobile@1x.jpg" alt="Фото товара" width="140" height="144">
@@ -89,7 +89,7 @@
             </div>
             <button class="product__btn btn btn--primary">Заказать</button>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item catalog__item--main product">
             <div class="product__container">
               <div class="product__img-container">
                 <img class="product__img" src="img/fish-small-mobile@1x.jpg" alt="Фото товара" width="140" height="144">
@@ -116,7 +116,7 @@
             </div>
             <button class="product__btn btn btn--primary">Заказать</button>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item catalog__item--main product">
             <div class="product__container">
               <div class="product__img-container">
                 <img class="product__img" src="img/fish-big-mobile@1x.jpg" alt="Фото товара" width="140" height="144">
@@ -143,7 +143,7 @@
             </div>
             <button class="product__btn btn btn--primary">Заказать</button>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item catalog__item--main product">
             <div class="product__container">
               <div class="product__img-container">
                 <img class="product__img" src="img/buckwheat-small-mobile@1x.jpg" alt="Фото товара" width="140" height="144">
@@ -170,7 +170,7 @@
             </div>
             <button class="product__btn btn btn--primary">Заказать</button>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item catalog__item--main product">
             <div class="product__container">
               <div class="product__img-container">
                 <img class="product__img" src="img/buckwheat-big-mobile@1x.jpg" alt="Фото товара" width="140" height="144">
@@ -197,7 +197,7 @@
             </div>
             <button class="product__btn btn btn--primary">Заказать</button>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item catalog__item--main product">
             <div class="product__container">
               <div class="product__img-container">
                 <img class="product__img" src="img/rice-small-mobile@1x.jpg" alt="Фото товара" width="140" height="144">
@@ -224,7 +224,7 @@
             </div>
             <button class="product__btn btn btn--primary">Заказать</button>
           </li>
-          <li class="catalog__item product product--show-more">
+          <li class="catalog__item catalog__item--main product product--show-more">
               <h3 class="product__title product__title--show-more">
                 Показать еще 100500 товаров
               </h3>
@@ -236,79 +236,85 @@
         </ul>
       </section>
 
-      <section class="catalog catalog--supplementary">
-        <h2 class="catalog__title heading-decor">Дополнительные товары</h2>
-        <ul class="catalog__list wrapper wrapper--supplementary">
-          <li class="catalog__item catalog__item--supplementary product">
-            <div class="product__info product__info--supplementary">
-              <h3 class="product__title product__title--supplementary">Сахарозаменитель</h3>
-              <table class="product__table product__table--supplementary section-text">
-                <tr>
-                  <td class="product__data">1 упаковка (100 г)</td>
-                  <td class="product__data product__data--value">100 Р.</td>
-                </tr>
-              </table>
-            </div>
-            <button class="product__btn btn btn--primary">Заказать</button>
-          </li>
-          <li class="catalog__item catalog__item--supplementary product">
-            <div class="product__info product__info--supplementary">
-              <h3 class="product__title product__title--supplementary">Питьевая вода</h3>
-              <table class="product__table product__table--supplementary section-text">
-                <tr>
-                  <td class="product__data">5 литров</td>
-                  <td class="product__data product__data--value">50 Р.</td>
-                </tr>
-              </table>
-            </div>
-            <button class="product__btn btn btn--primary">Заказать</button>
-          </li>
-          <li class="catalog__item catalog__item--supplementary product">
-            <div class="product__info product__info--supplementary">
-              <h3 class="product__title product__title--supplementary">Молоко</h3>
-              <table class="product__table product__table--supplementary section-text">
-                <tr>
-                  <td class="product__data">1 литр</td>
-                  <td class="product__data product__data--value">100 Р.</td>
-                </tr>
-              </table>
-            </div>
-            <button class="product__btn btn btn--primary">Заказать</button>
-          </li>
-          <li class="catalog__item catalog__item--supplementary product">
-            <div class="product__info product__info--supplementary">
-              <h3 class="product__title product__title--supplementary">Витамины</h3>
-              <table class="product__table product__table--supplementary section-text">
-                <tr>
-                  <td class="product__data">1 упаковка (30 г)</td>
-                  <td class="product__data product__data--value">300 Р.</td>
-                </tr>
-              </table>
-            </div>
-            <button class="product__btn btn btn--primary">Заказать</button>
-          </li>
-        </ul>
-      </section>
 
-      <div class="gift wrapper wrapper--gift">
-        <p class="gift__text section-text">Закажите все<br> и получите чехол для кота в подарок!</p>
+        <section class="catalog catalog--supplementary">
+          <h2 class="catalog__title heading-decor"><span>Дополнительные товары</span></h2>
+          <div class="catalog__container">
+            <ul class="catalog__list catalog__list--supplementary wrapper--supplementary">
+              <li class="catalog__item catalog__item--supplementary product product--supplementary">
+                <div class="product__info product__info--supplementary">
+                  <h3 class="product__title product__title--supplementary">Сахарозаменитель</h3>
+                  <table class="product__table product__table--supplementary section-text">
+                    <tr>
+                      <td class="product__data">1 упаковка (100 г)</td>
+                      <td class="product__data product__data--value">100 Р.</td>
+                    </tr>
+                  </table>
+                </div>
+                <button class="product__btn product__btn--supplementary btn btn--primary">Заказать</button>
+              </li>
+              <li class="catalog__item catalog__item--supplementary product product--supplementary">
+                <div class="product__info product__info--supplementary">
+                  <h3 class="product__title product__title--supplementary">Питьевая вода</h3>
+                  <table class="product__table product__table--supplementary section-text">
+                    <tr>
+                      <td class="product__data">5 литров</td>
+                      <td class="product__data product__data--value">50 Р.</td>
+                    </tr>
+                  </table>
+                </div>
+                <button class="product__btn product__btn--supplementary btn btn--primary">Заказать</button>
+              </li>
+              <li class="catalog__item catalog__item--supplementary product product--supplementary">
+                <div class="product__info product__info--supplementary">
+                  <h3 class="product__title product__title--supplementary">Молоко</h3>
+                  <table class="product__table product__table--supplementary section-text">
+                    <tr>
+                      <td class="product__data">1 литр</td>
+                      <td class="product__data product__data--value">100 Р.</td>
+                    </tr>
+                  </table>
+                </div>
+                <button class="product__btn product__btn--supplementary btn btn--primary">Заказать</button>
+              </li>
+              <li class="catalog__item catalog__item--supplementary product product--supplementary">
+                <div class="product__info product__info--supplementary">
+                  <h3 class="product__title product__title--supplementary">Витамины</h3>
+                  <table class="product__table product__table--supplementary section-text">
+                    <tr>
+                      <td class="product__data">1 упаковка (30 г)</td>
+                      <td class="product__data product__data--value">300 Р.</td>
+                    </tr>
+                  </table>
+                </div>
+                <button class="product__btn product__btn--supplementary btn btn--primary">Заказать</button>
+              </li>
+            </ul>
+            <div class="catalog__gift gift wrapper wrapper--gift">
+              <p class="gift__text section-text">Закажите все<br> и получите чехол для кота в подарок!</p>
+            </div>
+          </div>
+        </section>
+
+
       </div>
 
     </main>
 
     <footer class="page-footer">
-        <div class="page-footer__contacts page-footer__contacts--bg">
-          <div class="page-footer__info">
-            <p class="page-footer__dealers">
-              Приглашаем<br> к сотрудничеству дилеров!
-            </p>
-            <p class="page-footer__address section-text">
-              ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-            </p>
-          </div>
-          <div class="page-footer__map">
-          </div>
+      <div class="page-footer__contacts page-footer__contacts--bg-grey">
+        <div class="page-footer__info">
+          <p class="page-footer__dealers">
+            Приглашаем к&#160;сотрудничеству дилеров!
+          </p>
+          <p class="page-footer__address section-text">
+              <span>ул. Большая Конюшенная, д. 19/8</span> Санкт-Петербург
+          </p>
         </div>
+        <div class="page-footer__map">
+        </div>
+      </div>
+      <div class="page-footer__wrapper">
         <div class="page-footer__container">
           <div class="page-footer__logo-container">
             <p class="page-footer__logo">
@@ -372,6 +378,7 @@
                       H1.1v2.3h2V18z"/>
                     </g>
                   </svg>
+
                 </a>
               </li>
             </ul>
@@ -383,6 +390,7 @@
             </a>
           </div>
         </div>
-      </footer>
+      </div>
+    </footer>
   </body>
 </html>

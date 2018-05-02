@@ -1,85 +1,386 @@
-.profile {
+.profile__container {
+  @include tablet {
+    width: $tablet-width;
+    padding: 0 30px 43px;
+    margin: 0 auto;
+  }
 
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    width: $desktop-width;
+    padding: 20px 110px 38px;
+    margin: 0 auto;
+  }
+}
+
+.profile__container--contacts {
+  @include tablet {
+    padding-bottom: 38px;
+  }
+}
+
+.profile__container--comment {
+  @include tablet {
+    padding-bottom: 35px;
+  }
+}
+
+.profile__container--additional {
+  @include tablet {
+    padding-bottom: 0;
+  }
+
+  @include desktop {
+    padding-bottom: 10px;
+  }
+}
+
+.profile__container--submit {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    justify-content: flex-start;
+    margin-bottom: 45px;
+  }
 }
 
 .profile__fieldset {
   @include reset;
   border: none;
-
-  &--radio {
-    border-top: 1px solid $secondaryCol;
-    border-bottom: 1px solid $secondaryCol;
-  }
 }
 
 .profile__list {
   @include listReset;
   padding: 20px 20px 23px;
 
+  @include tablet {
+    padding: 20px 37px 23px 41px;
+    margin-bottom: 50px;
+  }
+
+  @include desktop {
+    width: 570px;
+    padding: 0;
+    margin: 0;
+  }
+
   &--radio {
-    padding-top: 25px;
+    padding-top: 21px;
+    padding-bottom: 19px;
+    border: 1px solid $secondaryCol;
+
+    @include tablet {
+      width: 631px;
+      margin: 0 37px 0 42px;
+      padding: 25px 20px 25px 26px;
+    }
+
+    @include desktop {
+      width: 570px;
+      margin: 0;
+    }
+  }
+
+  &--contacts {
+    padding-top: 21px;
+    padding-bottom: 21px;
+
+    @include tablet {
+      padding-top: 65px;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 1220px;
+      padding-top: 43px;
+      padding-bottom: 0;
+    }
+  }
+
+  &--additional {
+    padding-top: 18px;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-top: 42px;
+      margin: 0;
+    }
+
+    @include desktop {
+      width: 1220px;
+      padding-top: 24px;
+    }
   }
 }
 
 .profile__item {
+  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 
-  &--radio {
-    margin-bottom: 23px;
-  }
-
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @include tablet {
+    margin-bottom: 22px;
+  }
+
+  @include desktop {
+    width: 570px;
+  }
+}
+
+.profile__item--radio {
+  margin-bottom: 13px;
+
+  @include tablet {
+    margin-bottom: 10;
+  }
+}
+
+.profile__list--additional .profile__item {
+  margin-bottom: 12px;
+
+  @include tablet {
+    width: 288px;
+    margin-bottom: 32px;
+  }
+
+  @include desktop {
+    width: 245px;
   }
 }
 
 .profile__label {
-  padding-right: 15px;
+  padding-right: 14px;
   white-space: nowrap;
+  cursor: pointer;
+
+  @include tablet {
+    padding-right: 18px;
+  }
+}
+
+.profile__label--radio {
+  position: relative;
+  padding: 5px 46px;
+
+  @include tablet {
+    padding: 10px 60px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:hover::before {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.profile__radio:checked + .profile__label--radio::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 9px;
+  left: 9px;
+  width: 12px;
+  height: 12px;
+  background-color: $primaryCol;
+  border-radius: 50%;
+
+  @include tablet {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
+  }
+}
+
+.profile__label--checkbox {
+  position: relative;
+  padding: 5px 46px;
+
+  @include tablet {
+    padding: 10px 60px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:hover::before {
+    border-color: #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.profile__checkbox:checked + .profile__label--checkbox::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 7px;
+  left: 7px;
+  width: 18px;
+  height: 10px;
+  border: 2px solid $primaryCol;
+  border-right: transparent;
+  border-top: transparent;
+  transform: rotate(-45deg);
+
+  @include tablet {
+    top: 13px;
+    left: 12px;
+  }
 }
 
 .profile__input {
   flex: 1;
-  padding: 11px 50px 13px 14px;
+  padding: 11px 42px 13px 14px;
 
   font: inherit;
   text-transform: uppercase;
   border: none;
   outline: 1px solid #cdcdcd;
 
-  &:active, &:focus {
-    outline: 2px solid #444444;;
+  &:active,
+  &:focus {
+    outline: 2px solid #444444;
   }
 
   &:invalid {
     outline: 2px solid #ff8282;
   }
+
+  @include tablet {
+    padding: 10px 60px 10px 18px;
+  }
 }
 
 .profile__legend {
-  padding: 32px 0 13px 20px;
+  @include reset;
+  padding: 30px 0 13px 20px;
 
   &--comment {
     padding-top: 8px;
     padding-bottom: 33px;
   }
+
+  @include tablet {
+    width: $tablet-width;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    width: $desktop-width;
+  }
+}
+
+.profile__icon {
+  position: absolute;
+  right: 5%;
+
+  & path {
+    fill: #222222;
+  }
+
+  @include tablet {
+    right: 3%;
+  }
+}
+
+.profile__input:focus + .profile__icon path {
+  fill: $primaryCol;
+}
+
+.profile__input:invalid + .profile__icon path {
+  fill: #ff8282;
 }
 
 .profile__comment {
   width: 100%;
   min-height: 150px;
   margin: 0 20px;
-  padding: 11px 13px;
+  padding: 11px 12px 13px;
 
   font: inherit;
   text-transform: uppercase;
+
+  @include tablet {
+    width: 631px;
+    min-height: 175px;
+    margin: 43px 37px 0 40px;
+    padding: 13px 19px 13px;
+  }
+
+  @include desktop {
+    width: 100%;
+    margin: 24px 0 0;
+  }
 }
 
 .profile__btn {
   margin: 0 20px 20px;
   padding: 10px 20px 10px;
+
+  @include tablet {
+    width: 283px;
+    margin-left: 41px;
+    margin-right: 57px;
+    margin-bottom: 0;
+    padding: 15px 25px 16px;
+  }
+
+  @include desktop {
+    width: 570px;
+    margin-left: 0;
+    margin-right: 74px;
+  }
 }
 
 .profile__note {
@@ -87,4 +388,10 @@
   margin-bottom: 30px;
 
   text-align: center;
+
+  @include tablet {
+    width: 192px;
+    margin-bottom: 2px;
+    align-self: center;
+  }
 }

@@ -1,6 +1,53 @@
 .heading-decor {
+  display: flex;
+  align-items: flex-start;
+
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   text-transform: none;
+
+  @include tablet {
+    align-items: center;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &::after {
+    content: "";
+    height: 3px;
+    flex-grow: 1;
+    margin-top: 11px;
+    background-color: $primaryCol;
+  }
+
+  &::before {
+    @include tablet {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 28px;
+      margin-top: 9px;
+      background-color: $primaryCol;
+    }
+
+    @include desktop {
+      width: 70px;
+    }
+  }
+}
+
+.heading-decor span {
+  padding-right: 21px;
+
+  @include tablet {
+    padding-left: 40px;
+    padding-right: 43px;
+  }
+}
+
+.heading-decor .heading-decor__small {
+  @media (max-width: 767px) {
+    width: 203px;
+  }
 }

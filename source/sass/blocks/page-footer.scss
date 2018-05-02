@@ -1,20 +1,52 @@
 .page-footer {
-
+  @include desktop {
+    width: $desktop-width;
+    margin: 0 auto;
+  }
 }
 
-.page-footer__contacts--bg {
-  background-color: $secondaryCol;
+.page-footer__contacts {
+  position: relative;
+
+  &--bg-grey {
+    background-color: $secondaryCol;
+
+    @include desktop {
+      background-color: #ffffff;
+    }
+  }
 }
 
 .page-footer__info {
   display: flex;
   padding: 27px 20px 25px;
+
+  @include tablet {
+    width: $tablet-width;
+    margin: 0 auto;
+    padding: 62px 72px 60px 70px;
+  }
+
+  @include desktop {
+    position: absolute;
+    left: 110px;
+    top: 95px;
+    width: 570px;
+    height: 201px;
+    padding-left: 76px;
+    background-color: #ffffff;
+  }
 }
 
 .page-footer__dealers {
   @include reset;
   width: 140px;
   margin-right: auto;
+
+  @include tablet {
+    width: 170px;
+    line-height: 25px;
+  }
 }
 
 .page-footer__address {
@@ -22,6 +54,22 @@
   width: 140px;
 
   line-height: 20px;
+
+  @include tablet {
+    width: 170px;
+    text-align: right;
+  }
+
+  @include desktop {
+    text-align: left;
+  }
+
+  & span {
+    @include tablet {
+      display: block;
+      margin-bottom: 19px;
+    }
+  }
 }
 
 .page-footer__map {
@@ -30,16 +78,53 @@
 
   background: $secondaryCol url("../img/bg-map-mobile@1x.png") no-repeat;
   background-size: cover;
+
+  @include tablet {
+    height: 396px;
+  }
+
+  @include desktop {
+    height: 400px;
+  }
+}
+
+.page-footer__wrapper {
+  background-color: $secondaryCol;
+
+  @include desktop {
+    width: $desktop-width;
+    margin: 0 auto;
+  }
 }
 
 .page-footer__container {
   padding: 39px 20px 22px;
   background-color: $secondaryCol;
+
+  @include tablet {
+    width: $tablet-width;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38px 30px 30px;
+  }
+
+  @include desktop {
+    width: $desktop-width;
+    padding: 34px 110px 30px;
+  }
 }
 
 .page-footer__logo-container {
   border-bottom: 1px solid #cdcdcd;
   padding-bottom: 30px;
+
+  @include tablet {
+    border: none;
+    padding: 0;
+  }
 }
 
 .page-footer__logo {
@@ -51,6 +136,10 @@
 
 .page-footer__social {
   border-bottom: 1px solid #cdcdcd;
+
+  @include tablet {
+    border: none;
+  }
 }
 
 .page-footer__copyright {
@@ -68,7 +157,3 @@
 .page-footer__copyright-icon {
   margin-right: -6px;
 }
-
-
-
-
