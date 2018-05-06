@@ -16,7 +16,7 @@
       position: static;
       width: 100%;
       margin: 0;
-      padding: 23px 37px 27px;
+      padding: 24px 37px 27px;
       background-color: #ffffff;
     }
 
@@ -68,14 +68,17 @@
   }
 }
 
+.product__link {
+  color: $textDark;
+}
+
 .product__img-container {
   width: 50%;
 
   @include tablet {
     position: absolute;
-    top: -130px;
+    bottom: 305px;
     left: 50%;
-    z-index: -1;
     width: 100%;
     transform: translateX(-50%);
   }

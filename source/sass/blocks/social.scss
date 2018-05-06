@@ -3,7 +3,63 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 124px;
+  align-items: center;
+  width: 132px;
   margin: 0 auto;
-  padding: 22px 0 21px;
+  padding: 22px 7px 21px 0;
+
+  @include tablet {
+    width: 142px;
+    padding: 0;
+    padding-left: 18px;
+  }
+}
+
+.social__icon {
+  display: flex;
+}
+
+.social__icon path,
+.social__icon circle {
+  fill: #666666;
+}
+
+.social__icon:hover path,
+.social__icon:hover circle {
+  fill: $primaryCol;
+}
+
+.social__icon:active path,
+.social__icon:active circle {
+  opacity: 0.3;
+}
+
+.social__icon--vk {
+  width: 22px;
+  height: 12px;
+
+  @include tablet {
+    width: 30px;
+    height: 16px;
+  }
+}
+
+.social__icon--instagram {
+  width: 16px;
+  height: 16px;
+
+  @include tablet {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social__icon--fb {
+  width: 10px;
+  height: 19px;
+
+  @include tablet {
+    width: 14px;
+    height: 28px;
+  }
 }

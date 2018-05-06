@@ -31,7 +31,7 @@
 .page-header__container {
   display: flex;
   flex-wrap: wrap;
-  padding: 15px 20px 12px;
+  padding: 13px 20px 14px;
 
   border-bottom: 1px solid $secondaryCol;
 
@@ -49,7 +49,18 @@
   @include tablet {
     width: 173px;
     height: 58px;
+    padding-top: 4px;
   }
+
+  @include desktop {
+    width: 202px;
+    height: 60px;
+  }
+}
+
+.page-header__logo-img {
+  width: 100%;
+  height: auto;
 }
 
 .page-header__logo-link {
@@ -63,7 +74,67 @@
 }
 
 .page-header__nav-toggle {
+  position: relative;
+  padding: 0;
+  width: 24px;
+  height: 38px;
+
   @include tablet {
     display: none;
+  }
+}
+
+
+@media (max-width: $mobile-width-only) {
+  .page-header--no-js .page-header__nav-toggle {
+    display: none;
+  }
+  .page-header--no-js .page-header__nav {
+    display: block;
+  }
+
+  .page-header--nav-closed .page-header__nav {
+    display: none;
+  }
+
+  .page-header--nav-closed .page-header__nav-toggle {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      right: 0;
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: #222222;
+      box-shadow: 0 8px 0 #222222,
+                  0 16px 0 #222222;
+    }
+  }
+
+  .page-header--nav-opened .page-header__nav {
+    display: block;
+  }
+
+  .page-header--nav-opened .page-header__nav-toggle {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 18px;
+      right: 2px;
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: #222222;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
   }
 }
