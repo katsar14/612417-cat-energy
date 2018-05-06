@@ -77,12 +77,11 @@
   width: 100%;
   height: 362px;
 
-  background-color: $secondaryCol;
-  background: url("../img/map-pin.png") 50% 45% no-repeat, url("../img/bg-map-mobile@1x.png") 0 -37px no-repeat;
+  background: $secondaryCol url("../img/map-pin.png") 50% 45% no-repeat, url("../img/bg-map-mobile@1x.png") 0 -37px no-repeat;
   background-size: 62px, 100%;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background: url("../img/map-pin.png") 50% 45% no-repeat, url("../img/bg-map-mobile@2x.png") 0 -37px no-repeat;
+    background: $secondaryCol url("../img/map-pin.png") 50% 45% no-repeat, url("../img/bg-map-mobile@2x.png") 0 -37px no-repeat;
     background-size: 62px, 100%;
   }
 
