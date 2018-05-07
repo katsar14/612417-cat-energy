@@ -23,7 +23,7 @@
   }
 
   @include desktop {
-    width: 720px;
+    width: 50%;
     padding: 194px 50px 160px 190px;
   }
 }
@@ -36,6 +36,10 @@
   background: #65a93c url("../img/index-background-mobile@1x.jpg") center no-repeat;
   background-size: cover;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
   @include tablet {
     display: none;
   }
@@ -44,8 +48,13 @@
     position: static;
     display: block;
     order: 2;
-    width: 720px;
+    width: 50%;
     height: 696px;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 }
 
@@ -62,7 +71,7 @@
 
 .promo__slogan {
   @include reset;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 
   font-size: 14px;
   line-height: 14px;
@@ -82,19 +91,22 @@
   width: 280px;
   height: 271px;
   margin: 0 auto;
+  margin-bottom: 3px;
 
   @include tablet {
     width: 709px;
     height: 609px;
     position: absolute;
+    top: 29%;
+    right: 0;
     z-index: -1;
   }
 
   @include desktop {
     width: 552px;
-    height: 449px;
+    height: 499px;
     top: 20.5%;
-    left: 81.2%;
+    left: 78%;
     z-index: 2;
   }
 }

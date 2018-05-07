@@ -37,13 +37,18 @@
 }
 
 .profile__container--submit {
+  width: 87.5%;
+  margin: 0 auto;
+
   @include tablet {
+    width: $tablet-width;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 30px;
   }
 
   @include desktop {
+    width: $desktop-width;
     justify-content: flex-start;
     margin-bottom: 45px;
   }
@@ -279,8 +284,9 @@
 }
 
 .profile__input {
+  box-sizing: border-box;
   flex: 1;
-  padding: 11px 42px 13px 14px;
+  padding: 11px 15px 13px 14px;
 
   font: inherit;
   text-transform: uppercase;
@@ -299,6 +305,11 @@
   @include tablet {
     padding: 10px 60px 10px 18px;
   }
+}
+
+.profile__list--contacts .profile__input {
+  box-sizing: border-box;
+  padding-right: 40px;
 }
 
 .profile__legend {
@@ -343,13 +354,14 @@
 }
 
 .profile__comment {
-  width: 100%;
+  width: 87.5%;
   min-height: 150px;
   margin: 0 20px;
   padding: 11px 12px 13px;
 
   font: inherit;
   text-transform: uppercase;
+  border: 1px solid #cdcdcd;
 
   @include tablet {
     width: 631px;
@@ -365,7 +377,7 @@
 }
 
 .profile__btn {
-  margin: 0 20px 20px;
+  margin: 0 0 20px;
   padding: 10px 20px 10px;
 
   @include tablet {

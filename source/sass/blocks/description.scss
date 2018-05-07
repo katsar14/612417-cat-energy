@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0 30px;
-    min-height: 610px;
+    min-height: 607px;
     justify-content: space-between;
     align-content: space-between;
     padding-bottom: 54px;
@@ -48,7 +48,7 @@
 
   @include tablet {
     width: 325px;
-    padding: 111px 80px 42px 0;
+    padding: 109px 80px 42px 0;
   }
 
   @include desktop {
@@ -85,23 +85,44 @@
 
   &--1::before {
     background: $primaryCol url("../img/advantage-leaf@1x.png") center no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: $primaryCol url("../img/advantage-leaf@2x.png") center no-repeat;
+      background-size: 62%;
+    }
   }
 
   &--2::before {
     background: $primaryCol url("../img/advantage-powder@1x.png") center no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: $primaryCol url("../img/advantage-powder@2x.png") center no-repeat;
+      background-size: 62%;
+    }
   }
 
   &--3::before {
     background: $primaryCol url("../img/advantage-dining@1x.png") center no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: $primaryCol url("../img/advantage-dining@2x.png") center no-repeat;
+      background-size: 62%;
+    }
   }
 
   &--4::before {
     background: $primaryCol url("../img/advantage-clock@1x.png") center no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: $primaryCol url("../img/advantage-clock@2x.png") center no-repeat;
+      background-size: 62%;
+    }
   }
 
   &--1::after {
     @include tablet {
       content: "1";
+      left: 118px;
     }
   }
 

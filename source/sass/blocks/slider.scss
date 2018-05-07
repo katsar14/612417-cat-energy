@@ -1,6 +1,6 @@
 .slider {
   @include tablet {
-    padding: 35px 40px 70px;
+    padding: 35px 40px 66px;
     background-color: $secondaryCol;
   }
 
@@ -30,9 +30,10 @@
   transform: translateX(-50%);
 
   @include tablet {
-    width: 677px;
-    height: 499px;
-    top: -195px;
+    width: 690px;
+    height: 517px;
+    left: 50.5%;
+    top: -203px;
   }
 
   @include desktop {
@@ -49,17 +50,23 @@
 
 .slider__item--after {
   display: none;
+
+  @include tablet {
+    background-color: #eaeaea;
+  }
 }
 
 .slider__controls {
   display: flex;
   margin: 0 auto;
-  width: 207px;
+  margin-top: 3px;
+  width: 210px;
   justify-content: space-between;
   align-items: center;
 
   @include tablet {
     width: 570px;
+    margin-top: 0;
   }
 
   @include desktop {
@@ -89,7 +96,7 @@
 
 .slider__bar {
   position: relative;
-  width: 84px;
+  width: 83px;
   height: 14px;
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
@@ -106,7 +113,7 @@
 .slider__control {
   position: absolute;
   top: 50%;
-  left: 5%;
+  left: 7px;
   transform: translateY(-50%);
   width: 35px;
   height: 6px;
@@ -114,6 +121,7 @@
   border-radius: 3px;
 
   @include tablet {
+    left: -1px;
     width: 34px;
     height: 34px;
     border-radius: 50%;

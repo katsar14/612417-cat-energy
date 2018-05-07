@@ -18,6 +18,10 @@
     @include tablet {
       margin: 0 auto;
     }
+
+    @include desktop {
+      width: 100vw;
+    }
   }
 
   &--programs {
@@ -33,7 +37,7 @@
   }
 
   &--description {
-    margin-bottom: 40px;
+    margin-bottom: 39px;
 
     @include tablet {
       width: $tablet-width;
@@ -56,7 +60,7 @@
 
     @include tablet {
       width: 708px;
-      margin: 0 auto 72px;
+      margin: 0 auto 68px;
     }
 
     @include desktop {
@@ -83,9 +87,9 @@
 
   &--profile {
     margin-bottom: 19px;
-  }
 
-  @include tablet {
-    margin-bottom: 46px;
+    @include tablet {
+      margin-bottom: 46px;
+    }
   }
 }
