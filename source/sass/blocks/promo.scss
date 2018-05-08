@@ -23,7 +23,7 @@
   }
 
   @include desktop {
-    width: 50%;
+    width: 720px;
     padding: 194px 50px 160px 190px;
   }
 }
@@ -48,7 +48,7 @@
     position: static;
     display: block;
     order: 2;
-    width: 50%;
+    width: 720px;
     height: 696px;
     background-image: url("../img/index-background-desktop@1x.jpg");
 
