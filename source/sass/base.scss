@@ -35,6 +35,7 @@ body {
   font-weight: 400;
   color: $textDark;
   text-transform: uppercase;
+  overflow: hidden;
 
   @include tablet {
     font-size: 20px;
