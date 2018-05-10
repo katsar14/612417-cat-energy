@@ -2,14 +2,16 @@
   font-weight: 500;
   font-family: "Oswald";
   font-style: normal;
-  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("fonts/oswaldmedium.woff") format("woff");
+  font-display: swap;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
 }
 
 @font-face {
   font-weight: 400;
   font-family: "Oswald";
   font-style: normal;
-  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("fonts/oswaldregular.woff") format("woff");
+  font-display: swap;
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
 }
 
 *,
@@ -25,7 +27,7 @@ html {
 
 body {
   @include reset;
-  min-width: 320px;
+  // min-width: 320px;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
