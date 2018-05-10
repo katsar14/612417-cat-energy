@@ -27,7 +27,7 @@ html {
 
 body {
   @include reset;
-  // min-width: 320px;
+  min-width: 300px;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
