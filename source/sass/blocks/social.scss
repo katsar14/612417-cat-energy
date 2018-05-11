@@ -17,20 +17,14 @@
 
 .social__icon {
   display: flex;
-}
-
-.social__icon path,
-.social__icon circle {
   fill: #666666;
 }
 
-.social__icon:hover path,
-.social__icon:hover circle {
+.social__icon:hover {
   fill: $primaryCol;
 }
 
-.social__icon:active path,
-.social__icon:active circle {
+.social__icon:active {
   opacity: 0.3;
 }
 

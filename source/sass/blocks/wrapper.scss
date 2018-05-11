@@ -20,7 +20,8 @@
     }
 
     @include desktop {
-      width: 100vw;
+      width: 1440px;
+      margin: 0 auto;
     }
   }
 
