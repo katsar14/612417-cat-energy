@@ -45,9 +45,9 @@ gulp.task("serve", function() {
   })
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/*.html", ["html"]);
+  gulp.watch("source/*.html", ["html"]).on("change", server.reload);
+  gulp.watch("source/js/**/*.js", ["scripts"]).on("change", server.reload);
 });
-
 
 gulp.task("html", function() {
   return gulp.src("source/*.html")
@@ -59,10 +59,10 @@ gulp.task("html", function() {
 
 
 gulp.task("scripts", function() {
-  return gulp.src(["source/js/**/*.js", "node_modules/picturefill/dist/picturefill.js"])
-    .pipe(uglify())
+  return gulp.src(["node_modules/picturefill/dist/picturefill.js", "source/js/**/*.js"])
     .pipe(concat("scripts.js"))
-    .pipe(gulp.dest("build/js"))
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"));
 });
 
 
