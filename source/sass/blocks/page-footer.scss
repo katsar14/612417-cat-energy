@@ -30,6 +30,7 @@
 
   @include desktop {
     position: absolute;
+    z-index: 10;
     left: 110px;
     top: 95px;
     width: 570px;
@@ -199,7 +200,6 @@
 
   @include tablet {
     padding: 0;
-    // margin-top: 11px;
   }
 }
 
