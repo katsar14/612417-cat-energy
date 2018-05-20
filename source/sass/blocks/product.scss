@@ -3,12 +3,14 @@
     position: relative;
     width: 324px;
     margin-top: 83px;
-    padding: 162px 37px 39px;
+    padding: 163px 37px 39px;
+
     background-color: $secondaryCol;
   }
 
   @include desktop {
     width: 245px;
+    margin-top: 82px;
   }
 
   &--supplementary {
@@ -17,6 +19,7 @@
       width: 100%;
       margin: 0;
       padding: 24px 37px 27px;
+
       background-color: #ffffff;
     }
 
@@ -30,6 +33,7 @@
 }
 
 .product--show-more {
+  position: relative;
   padding-top: 26px;
 
   text-align: center;
@@ -42,16 +46,21 @@
 
   &::before,
   &::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    display: block;
+    width: 2px;
+    height: 30px;
+
+    background-color: #e6e6e6;
+
+    transform: translateX(-50%);
+
     @include tablet {
-      content: "";
-      position: absolute;
       top: 54px;
-      left: 50%;
-      display: block;
-      width: 2px;
       height: 60px;
-      background-color: #e6e6e6;
-      transform: translateX(-50%);
     }
   }
 
@@ -65,6 +74,7 @@
 
   @include tablet {
     flex-direction: column;
+    margin-bottom: 2px;
   }
 }
 
@@ -77,10 +87,15 @@
 
   @include tablet {
     position: absolute;
-    bottom: 305px;
+    bottom: 303px;
     left: 50%;
     width: 100%;
+
     transform: translateX(-50%);
+  }
+
+  @include desktop {
+    bottom: 304px;
   }
 }
 
@@ -104,7 +119,7 @@
 
   &--supplementary {
     width: auto;
-    padding: 0 0 10px;
+    padding: 0 0 9px;
 
     @include tablet {
       display: flex;
@@ -118,7 +133,7 @@
       align-items: center;
       margin-bottom: 0;
       padding-bottom: 0;
-      padding-top: 2px;
+      padding-top: 0;
     }
   }
 }
@@ -135,12 +150,14 @@
   @include tablet {
     padding: 0 50px;
     margin-bottom: 20px;
-    text-align: center;
+
     font-size: 20px;
+    text-align: center;
   }
 
   @include desktop {
     padding: 0 20px;
+    margin-bottom: 18px;
   }
 
   &--show-more {
@@ -164,6 +181,7 @@
     @include tablet {
       padding: 0;
       margin-bottom: 5px;
+
       text-align: left;
     }
 
@@ -175,6 +193,7 @@
 
 .product__table {
   width: 100%;
+
   font-size: 12px;
   line-height: 13px;
 
@@ -191,13 +210,22 @@
     @include tablet {
       width: auto;
       display: flex;
+
       font-size: 16px;
       line-height: 20px;
     }
 
     @include desktop {
       width: 285px;
+      padding-top: 7px;
     }
+  }
+}
+
+.product__table .product__data {
+  @media (max-width: 767px) {
+    padding: 0;
+    padding-bottom: 2px;
   }
 }
 
@@ -209,9 +237,11 @@
 }
 
 .product__table--supplementary tr {
+  display: flex;
+  justify-content: space-between;
+
   @include desktop {
     width: 285px;
-    display: flex;
   }
 }
 
@@ -223,12 +253,24 @@
 
 .product__data {
   @include tablet {
-    padding: 9px 0 7px;
+    padding: 8px 0 7px;
+
     border-bottom: 1px solid #cdcdcd;
+  }
+
+  @include desktop {
+    padding: 9px 0 7px;
   }
 }
 
+.product__data--value {
+  text-align: right;
+}
+
 .product__table--supplementary td {
+  display: flex;
+  padding: 0;
+
   border: none;
 
   @include tablet {
@@ -240,8 +282,23 @@
   }
 }
 
-.product__data--value {
-  text-align: right;
+.product__table--supplementary .product__data--water {
+  @include tablet {
+    padding-right: 8px;
+  }
+}
+
+.product__table--supplementary .product__data--short {
+  @include desktop {
+    padding-right: 8px;
+  }
+}
+
+.product__table--supplementary .product__data--value {
+  @include desktop {
+    display: block;
+    text-align: right;
+  }
 }
 
 .product__btn {
@@ -249,6 +306,7 @@
 
   @include tablet {
     width: 100%;
+
     font-size: 16px;
     line-height: 20px;
   }
@@ -269,9 +327,10 @@
 
   @include tablet {
     padding: 0 20px;
+    margin-bottom: 83px;
+
     font-size: 16px;
     line-height: 20px;
-    margin-bottom: 83px;
   }
 
   @include desktop {

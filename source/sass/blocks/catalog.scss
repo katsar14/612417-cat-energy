@@ -6,9 +6,9 @@
   }
 
   @include desktop {
-    width: $desktop-width;
+    width: 1300px;
     margin: 0 auto;
-    padding: 0 110px;
+    padding: 0 40px;
   }
 
   &--supplementary {
@@ -18,15 +18,15 @@
     }
 
     @include desktop {
-      width: $desktop-width;
-      margin: 0 auto;
+      width: 100%;
+      margin-bottom: 0;
     }
   }
 }
 
 .catalog__list {
   @include listReset;
-  border-top: 1px solid $secondaryCol;
+  border-top: 1px solid #ededed;
 
   @include tablet {
     border: none;
@@ -36,14 +36,14 @@
     @include tablet {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
     }
   }
 
   &--supplementary {
     @include desktop {
       width: 895px;
-      border-top: 1px solid $secondaryCol;
+
+      border-top: 1px solid #cdcdcd;
     }
   }
 }
@@ -51,12 +51,35 @@
 .catalog__item {
   padding: 0 20px 24px;
 
-  border-bottom: 1px solid $secondaryCol;
+  border-bottom: 1px solid #ededed;
 
   &--main {
     @include tablet {
+      margin-bottom: 57px;
+      margin-right: 60px;
+
       border: none;
-      margin-bottom: 58px;
+    }
+
+    @include desktop {
+      margin-right: 80px;
+      margin-bottom: 60px;
+    }
+
+    &:nth-child(2n) {
+      @include tablet {
+        margin-right: 0;
+      }
+
+      @include desktop {
+        margin-right: 80px;
+      }
+    }
+
+    &:nth-child(4n) {
+      @include desktop {
+        margin-right: 0;
+      }
     }
   }
 
@@ -64,18 +87,18 @@
     padding: 11px 0 19px;
 
     @include tablet {
-      border: 1px solid $secondaryCol;
+      border: 1px solid #cdcdcd;
       border-bottom: none;
     }
 
     @include desktop {
       border: none;
-      border-bottom: 1px solid $secondaryCol;
+      border-bottom: 1px solid #cdcdcd;
     }
   }
 
   &--supplementary:last-child {
-    border-bottom: 1px solid $secondaryCol;
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 
@@ -84,12 +107,12 @@
   padding: 28px 0 34px 20px;
 
   @include tablet {
-    padding: 7px 0 80px;
+    padding: 10px 0 80px;
   }
 
   @include desktop {
     width: 100%;
-    padding: 18px 0 79px;
+    padding: 16px 0 78px;
   }
 }
 
@@ -98,8 +121,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 1440px;
-    padding: 0 110px 85px;
+    width: 1300px;
+    padding: 0 40px 85px;
     margin: 0 auto;
   }
 }

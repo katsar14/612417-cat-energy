@@ -8,12 +8,13 @@
   @include tablet {
     padding-right: 285px;
     padding-left: 41px;
+
     font-size: 20px;
     line-height: 30px;
   }
 
   @include desktop {
-    padding-left: 110px;
-    padding-right: 950px;
+    padding-left: 40px;
+    padding-right: 880px;
   }
 }

@@ -20,6 +20,7 @@
     left: 22px;
     width: 50px;
     height: 50px;
+
     border-radius: 50%;
     background: $primaryCol;
 
@@ -54,6 +55,7 @@
       left: 13px;
       width: 67px;
       height: 28px;
+
       background: url("../img/icon-cat-pro.svg") no-repeat;
 
       @include tablet {
@@ -79,6 +81,7 @@
     left: 30px;
     width: 35px;
     height: 49px;
+
     background: url("../img/icon-cat-slim.svg") no-repeat;
 
     @include tablet {
@@ -109,6 +112,7 @@
   @include tablet {
     margin-bottom: 24px;
     padding-left: 0;
+
     font-size: 36px;
     line-height: 37px;
   }
@@ -155,6 +159,7 @@
     display: block;
     width: 18px;
     height: 3px;
+
     background-color: #3e4242;
   }
 
@@ -166,6 +171,7 @@
     display: block;
     width: 0;
     height: 0;
+
     border: 6px solid transparent;
     border-left: 6px solid #3f4242;
   }

@@ -9,13 +9,14 @@
     justify-content: space-between;
     align-content: space-between;
     padding-bottom: 54px;
+
     border-bottom: 1px solid $secondaryCol;
   }
 
   @include desktop {
     min-height: 0;
-    flex-wrap: nowrap;
     padding: 0 40px;
+
     border: none;
   }
 }
@@ -74,12 +75,13 @@
   &::after {
     @include tablet {
       position: absolute;
-      font-size: 281px;
-      line-height: 281px;
-      color: $secondaryCol;
       z-index: -1;
       top: -40px;
       left: 113px;
+
+      font-size: 281px;
+      line-height: 281px;
+      color: $secondaryCol;
     }
   }
 
@@ -88,7 +90,7 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background: $primaryCol url("../img/advantage-leaf@2x.png") center no-repeat;
-      background-size: 62%;
+      background-size: 50px;
     }
   }
 
@@ -97,7 +99,7 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background: $primaryCol url("../img/advantage-powder@2x.png") center no-repeat;
-      background-size: 62%;
+      background-size: 50px;
     }
   }
 
@@ -106,7 +108,7 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background: $primaryCol url("../img/advantage-dining@2x.png") center no-repeat;
-      background-size: 62%;
+      background-size: 50px;
     }
   }
 
@@ -115,7 +117,7 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background: $primaryCol url("../img/advantage-clock@2x.png") center no-repeat;
-      background-size: 62%;
+      background-size: 50px;
     }
   }
 

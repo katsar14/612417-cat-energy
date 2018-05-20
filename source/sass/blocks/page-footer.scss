@@ -1,6 +1,6 @@
 .page-footer {
   @include desktop {
-    width: $desktop-width;
+    width: 100%;
     margin: 0 auto;
   }
 }
@@ -31,11 +31,12 @@
   @include desktop {
     position: absolute;
     z-index: 10;
-    left: 110px;
-    top: 95px;
+    left: 40px;
+    top: 97px;
     width: 570px;
     height: 201px;
     padding-left: 76px;
+
     background-color: #ffffff;
   }
 }
@@ -47,6 +48,7 @@
 
   @include tablet {
     width: 170px;
+
     line-height: 25px;
   }
 }
@@ -59,10 +61,13 @@
 
   @include tablet {
     width: 170px;
+
     text-align: right;
   }
 
   @include desktop {
+    width: 172px;
+
     text-align: left;
   }
 
@@ -70,6 +75,10 @@
     @include tablet {
       display: block;
       margin-bottom: 19px;
+    }
+
+    @include desktop {
+      margin-bottom: 20px;
     }
   }
 }
@@ -101,7 +110,7 @@
   }
 
   @include desktop {
-    width: $desktop-width;
+    width: 100%;
     height: 400px;
 
     background: url("../img/map-pin.png") 76% 50.5% no-repeat, #f2f2f2 url("../img/bg-map-desktop@1x.png") 0 0 no-repeat;
@@ -118,13 +127,13 @@
   background-color: $secondaryCol;
 
   @include desktop {
-    width: $desktop-width;
-    margin: 0 auto;
+    width: 100%;
   }
 }
 
 .page-footer__container {
-  padding: 22px 20px 10px;
+  padding: 24px 20px 10px;
+
   background-color: $secondaryCol;
 
   @include tablet {
@@ -138,21 +147,23 @@
   }
 
   @include desktop {
-    width: $desktop-width;
-    padding: 50px 110px;
+    min-width: 1300px;
+    padding: 50px 40px 52px;
   }
 }
 
 .page-footer__logo-container {
-  border-bottom: 1px solid #cdcdcd;
   padding-bottom: 47px;
+
+  border-bottom: 1px solid #cdcdcd;
 
   @include tablet {
     display: flex;
-    border: none;
     padding: 0;
     padding-top: 3px;
     padding-left: 3px;
+
+    border: none;
   }
 
   @include desktop {
@@ -173,6 +184,7 @@
 
 .page-footer__logo-link {
   display: flex;
+
   cursor: pointer;
 
   &:hover {
@@ -206,14 +218,24 @@
 .page-footer__copyright-text {
   display: flex;
   margin-right: 7px;
+
   font-size: 16px;
   line-height: 16px;
   cursor: pointer;
+
+  @include desktop {
+    margin-right: 9px;
+  }
 }
 
 .page-footer__copyright-link {
   display: flex;
+
   cursor: pointer;
+
+  @include desktop {
+    padding-top: 2px;
+  }
 }
 
 .page-footer__copyright-icon {

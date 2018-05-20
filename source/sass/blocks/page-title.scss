@@ -8,13 +8,13 @@
   text-transform: none;
 
   @include tablet {
-    padding: 51px 0 83px;
+    padding: 51px 0 81px;
     font-size: 60px;
     line-height: 60px;
   }
 
   @include desktop {
-    padding: 68px 110px 83px;
+    padding: 68px 40px 83px;
   }
 
   &--profile {

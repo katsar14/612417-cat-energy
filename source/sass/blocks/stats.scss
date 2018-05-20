@@ -9,10 +9,17 @@
   }
 
   @include desktop {
-    width: 1440px;
-    margin: 0 auto;
-    padding-top: 80px;
     display: flex;
+    width: 100%;
+    padding-top: 80px;
+  }
+}
+
+.stats__wrapper {
+  @include desktop {
+    display: flex;
+    width: 1300px;
+    margin: 0 auto;
   }
 }
 
@@ -24,11 +31,12 @@
     width: $tablet-width;
     margin: 0 auto;
     padding: 40px 30px 222px;
+
     background-color: #ffffff;
   }
 
   @include desktop {
-    width: 720px;
+    width: 50%;
     margin: 0;
     padding: 0;
   }
@@ -42,7 +50,7 @@
   }
 
   @include desktop {
-    padding-left: 110px;
+    padding-left: 40px;
     margin-bottom: 73px;
   }
 }
@@ -57,8 +65,9 @@
   }
 
   @include desktop {
-    padding: 70px 175px 68px 110px;
+    padding: 70px 175px 68px 40px;
     margin-bottom: 0;
+
     background-color: $secondaryCol;
   }
 }
@@ -72,8 +81,9 @@
 
   @include desktop {
     flex-direction: column;
+    padding: 0 100px 72px 40px;
+
     background-color: $secondaryCol;
-    padding: 0 100px 72px 110px;
   }
 }
 
@@ -92,6 +102,10 @@
   margin: 0 auto;
 
   text-align: center;
+
+  @media (max-width: 767px) {
+    width: 280px;
+  }
 
   @include desktop {
     margin: 0;
@@ -125,6 +139,7 @@
     padding: 5px 6px;
     left: 7.8%;
     bottom: -16%;
+
     font-size: 14px;
     line-height: 14px;
     background-color: #ffffff;
@@ -132,6 +147,7 @@
 
   @include desktop {
     left: 5%;
+
     background-color: $secondaryCol;
   }
 }
@@ -181,6 +197,7 @@
   @include tablet {
     width: 190px;
     padding-top: 8px;
+
     font-size: 20px;
     line-height: 29px;
     text-align: right;
@@ -188,8 +205,9 @@
 
   @include desktop {
     width: auto;
-    text-align: left;
     padding-top: 11px;
+
+    text-align: left;
   }
 }
 

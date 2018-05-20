@@ -9,8 +9,9 @@
     background-image: url("../img/gift-photo-mobile@2x.jpg");
   }
 
-  @media (min-width: $tablet-width) and (max-width: 1439px) {
+  @media (min-width: $tablet-width) and (max-width: 1299px) {
     padding: 71px 100px 69px 423px;
+
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -20,6 +21,7 @@
 
   @include desktop {
     padding: 188px 40px 40px;
+
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -35,10 +37,12 @@
     display: block;
     width: 55px;
     height: 60px;
+
     background: url("../img/icon-gift.svg") no-repeat center;
+
     transform: translateX(-50%);
 
-    @media (min-width: $tablet-width) and (max-width: 1439px) {
+    @media (min-width: $tablet-width) and (max-width: 1299px) {
       top: 65px;
       left: 119px;
     }
@@ -53,7 +57,7 @@
   line-height: 20px;
   text-align: center;
 
-  @media (min-width: $tablet-width) and (max-width: 1439px) {
+  @media (min-width: $tablet-width) and (max-width: 1299px) {
     text-align: left;
   }
 }

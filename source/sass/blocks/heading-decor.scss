@@ -16,8 +16,9 @@
   &::after {
     content: "";
     height: 3px;
-    flex-grow: 1;
-    margin-top: 11px;
+    flex-grow: 3;
+    margin-top: 13px;
+
     background-color: $primaryCol;
   }
 
@@ -28,21 +29,30 @@
       height: 3px;
       width: 28px;
       margin-top: 9px;
+
       background-color: $primaryCol;
     }
 
     @include desktop {
+      width: 0;
+    }
+
+    @media (min-width: 1371px) {
       width: 70px;
     }
   }
 }
 
 .heading-decor span {
-  padding-right: 21px;
+  padding-right: 22px;
 
   @include tablet {
     padding-left: 40px;
     padding-right: 43px;
+  }
+
+  @include desktop {
+    padding-right: 36px;
   }
 }
 

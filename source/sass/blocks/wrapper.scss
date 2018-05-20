@@ -7,7 +7,7 @@
   }
 
   @include desktop {
-    width: 1440px;
+    min-width: 1300px;
     margin: 0 auto;
   }
 
@@ -20,8 +20,8 @@
     }
 
     @include desktop {
-      width: 1440px;
-      margin: 0 auto;
+      width: 100%;
+      max-width: none;
     }
   }
 
@@ -46,7 +46,8 @@
     }
 
     @include desktop {
-      width: 1300px;
+      min-width: 1300px;
+      max-width: $desktop-width;
       margin: 0 auto;
     }
   }
@@ -70,27 +71,31 @@
     }
   }
 
-  &--gift {
-    margin: 0 20px;
-    margin-bottom: 37px;
-
-    @include tablet {
-      width: 708px;
-      margin: 0 auto;
-      margin-bottom: 76px;
-    }
-
-    @include desktop {
-      width: 245px;
-      margin: 0;
-    }
-  }
-
   &--profile {
     margin-bottom: 19px;
 
     @include tablet {
       margin-bottom: 46px;
     }
+
+    @include desktop {
+      margin-bottom: 47px;
+    }
+  }
+}
+
+.wrapper--gift {
+  margin: 0 20px;
+  margin-bottom: 37px;
+
+  @include tablet {
+    width: 708px;
+    margin: 0 auto;
+    margin-bottom: 76px;
+  }
+
+  @include desktop {
+    width: 245px;
+    margin: 0;
   }
 }
